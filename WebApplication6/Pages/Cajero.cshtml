@@ -8,8 +8,14 @@
         <label>
             Banco
         </label>
-        <select class="form-control">
-            <option>ABC</option>
+        <select class="form-control" name="banco">
+            @foreach (string x in Model.bancos)
+            {
+                <option value="@x">
+                    @x
+                </option>
+
+            }
         </select>
     </div>
     <br />
