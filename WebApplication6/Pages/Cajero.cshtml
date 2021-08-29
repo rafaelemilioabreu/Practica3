@@ -1,0 +1,51 @@
+﻿@page
+@model WebApplication6.Pages.CajeroModel
+@{
+}
+
+<form  method="get">
+    <div>
+        <label>
+            Banco
+        </label>
+        <select class="form-control">
+            <option>ABC</option>
+        </select>
+    </div>
+    <br />
+    <div>
+        <label>
+            Monto
+        </label>
+        <input type="number" name="monto" value="" />
+    </div>
+
+    <div>
+        <input type="submit"  value="Retirar" />
+    </div>
+
+    <div>
+        <label>Retirado</label>
+        <label>@Model.retirado</label>
+    </div>
+
+    <div>
+        <label>Billetes de mil</label>
+        <label>@Model.billetesmil</label>
+    </div>
+    <div>
+        <label>Billetes de quinientos</label>
+        <label>@Model.billetesquinientos</label>
+    </div>
+    <div>
+        <label>Billetes de cien</label>
+        <label>@Model.billetescien</label>
+    </div>
+
+    @if (Model.retirado == 0) { 
+       <div>
+        <label>No puede Retirar mas de 10,000 ni menos de 2,000</label>
+        
+    </div>
+    }
+</form>
